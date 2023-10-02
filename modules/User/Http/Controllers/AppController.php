@@ -12,7 +12,11 @@ class AppController extends BaseController
     {
         $user = User::find(1); // test user
         $token = $user->createToken('token-name')->plainTextToken;
-        return $token;
+
+        //return response()->json(['token' => $token], 200);
+        return response()->json(['token' => $token] , 200)
+                            ->header('Content-Type', 'application/json'); // Set the 'Content-Type' header to specify JSON.
+
     }
 
     function user()

@@ -3,7 +3,7 @@
 namespace Database\Seeders;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
-use Modules\User\Models\User; // Make sure to import your User model
+use App\Models\User; // Make sure to import your User model
 
 class UserSeeder extends Seeder
 {

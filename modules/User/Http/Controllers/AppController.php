@@ -17,7 +17,7 @@ class AppController extends BaseController
 
     function user()
     {
-        return response()->json(['message' => 'This is protected resource'], 200);
+        return response()->json(['message' => 'This is protected resource 123'], 200);
     }
 
     public function login(Request $request)

@@ -13,9 +13,16 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
+Route::middleware('auth:sanctum')->get('/check-token', function (Request $request) {
+    return response()->json("token is valid");
+});
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
+});
+
+Route::middleware('auth:sanctum')->get('/dashboard', function (Request $request) {
+    return response()->json("dashboard access");
 });
 
 include(base_path('modules/User/routes/routes.php'));
